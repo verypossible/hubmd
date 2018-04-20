@@ -1,0 +1,16 @@
+{
+  "name": "hubmd",
+  "version": "1.0.0",
+  "description": "converting markdown to html for exporting to hubspot",
+  "main": "index.js",
+  "scripts": {
+    "convert": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prismjs": "^1.14.0",
+    "remarkable": "^1.7.1",
+    "yargs": "^11.0.0"
+  }
+}
