@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const yargs = require('yargs');
 var argv = yargs
   .usage('This is my awesome program\n\nUsage: $0 [options]')
@@ -24,8 +25,6 @@ var argv = yargs
     })
   .argv;
 
-console.log("input:", argv.input);
-console.log("output:", argv.output);
 
 const Prism = require("prismjs");
 const Remarkable = require("remarkable");
@@ -51,5 +50,7 @@ const parsed = md.render(unparsed);
 
 fs.writeFile(argv.output, parsed, function(err, data) {
   if (err) console.log(err);
+  console.log("input:", argv.input);
+  console.log("output:", argv.output);
   console.log("done");
 });
